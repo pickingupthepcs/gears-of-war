@@ -2,7 +2,7 @@
 
 ## Contents
 
-- [Install Guide > Steam Deck](#install-guide->-steam-deck)<br>
+- [Install Guide - Steam Deck](#install-guide---steam-deck)<br>
   &emsp;[1. Prepare Gears of War DVD](#1-prepare-gears-of-war-dvd)<br>
   &emsp;[2. Install Mozilla Firefox](#2-install-mozilla-firefox)<br>
   &emsp;[3. Install ProtonUp-Qt and GE-Proton10-34](#3-install-protonup-qt-and-ge-proton10-34)<br>
@@ -16,7 +16,7 @@
     - [Skip intro videos](#skip-intro-videos)
 - [Credits](#credits)
 
-## Install Guide > Steam Deck
+## Install Guide - Steam Deck
 
 This install guide outlines how to install the PC-DVD version of Gears of War on a factory reset Steam Deck in Desktop Mode. Note that there may be steps that aren't applicable if you have already installed Mozilla Firefox, ProtonUp-Qt, Lutris etc.
 
@@ -71,18 +71,20 @@ Gears of War can be installed using any of the following four methods:<br>
     1. Select `Install` in the Gears of War setup window
     2. Proceed through the game installation
 > [!NOTE]
-> **🚩 After the game has been installed, close the Gears of War launch window or confirm the DVD prompt.**
+> **🚩 After the game has been installed, close the launch window or confirm the DVD prompt.**
 4. Optional Frame Limit
 > [!NOTE]
-> **🚩 It is recommended that you do NOT disable the frame limit in Gears of War, as highlighted by the [car push sequence]().**<br>
-> **🚩 Note that it can be [toggled manually](https://www.pcgamingwiki.com/wiki/Gears_of_War#High_frame_rate) after installation if you wish to experiment, and that the Steam Deck's own frame limiter can be used to cap the frame rate regardless.**
+> **🚩 It is recommended that you do NOT disable the frame limit in Gears of War.**<br>
+> **🚩 High frame rate issues are highlighted in the [car push sequence]().**<br>
+> **🚩 The frame limit can be [toggled manually](https://www.pcgamingwiki.com/wiki/Gears_of_War#High_frame_rate) if you wish to experiment.**<br>
+> **🚩 The Steam Deck's own frame limiter can also be used to cap the frame rate regardless.**
 5. Installing required DirectX files
 > [!NOTE]
 > **🚩 .NET installation will generate xalia.exe prompts - confirm them when they appear.**<br>
-> **🚩 .NET installation will automatically open Firefox - minimize Firefox for the remainder of the installation.**<br>
+> **🚩 .NET installation will open Firefox - minimize it for the remainder of the installation.**<br>
 6. Installing Gears of War Title Updates 1, 2 and 3
 > [!NOTE]
-> **🚩 After each update has been installed, close the Gears of War launch window or confirm the DVD prompt.**
+> **🚩 After each update has been installed, close the launch window or confirm the DVD prompt.**
 7. Completion
     1. Select `Close` in the installer window
     2. Return to the `Games` page in Lutris
