@@ -1,0 +1,122 @@
+game_slug: gears-of-war
+installer_slug: gears-of-war-deck
+description: Steam Deck Installer
+name: Gears of War
+notes: "Based on previous Lutris installers for Gears of War, this Steam Deck version includes:\r\n\
+        \ - Gears of War PC Title Updates 1, 2 and 3\r\n\
+        \ - Launcher Bypass\r\n\
+        \ - Xliveless\r\n\
+        \ - AMD Troika Fix\r\n\
+        \ - Optional Frame Limit\r\n\
+        \ - Steam Deck Configuration"
+runner: wine
+slug: gears-of-war-deck
+version: DVD version
+
+script:
+
+    files:
+    - patch1:
+        filename: GearsOfWar_TitleUpdate.exe
+        url: https://archive.org/download/gears-of-war-pc-title-updates/Gears%20of%20War%20PC%20Title%20Updates.rar/Gears%20of%20War%20PC%20Title%20Updates%2FGearsOfWar_TitleUpdate.exe
+    - patch2:
+        filename: GearsTU.exe
+        url: https://archive.org/download/gears-of-war-pc-title-updates/Gears%20of%20War%20PC%20Title%20Updates.rar/Gears%20of%20War%20PC%20Title%20Updates%2FGearsTU.exe
+    - patch3:
+        filename: GearsPC_TU3_Microsoft.exe
+        url: https://archive.org/download/gears-of-war-pc-title-updates/Gears%20of%20War%20PC%20Title%20Updates.rar/Gears%20of%20War%20PC%20Title%20Updates%2FGearsPC_TU3_Microsoft.exe
+    - launcher:
+        filename: default.htm
+        url: https://github.com/njunius/Gears-of-War-Launcher-Bypass-Update/raw/refs/heads/main/default.htm
+    - startup:
+        filename: Startup.exe
+        url: https://archive.org/download/gears-of-war-pc-title-updates/Gears%20of%20War%20PC%20Title%20Updates.rar/Gears%20of%20War%20PC%20Title%20Updates%2FStartup.exe
+    - xliveless:
+        filename: Xliveless.zip
+        url: https://community.pcgamingwiki.com/files/file/576-xliveless/?do=download&r=12662&confirm=1&t=1&csrfKey=85eec127b200c1b3901d0eed51bf1820
+    - troika:
+        filename: d3dx10_35.dll
+        url: https://github.com/pickingupthepcs/gears-of-war/raw/refs/heads/main/d3dx10_35.dll
+    - steamdeck:
+        filename: steamdeck.zip
+        url: https://github.com/pickingupthepcs/gears-of-war/raw/refs/heads/main/steamdeck.zip
+
+    game:
+      exe: $GAMEDIR/drive_c/Program Files (x86)/Microsoft Games/Gears of War/Binaries/Startup.exe
+      args: -exec=autoexec.cfg
+      prefix: $GAMEDIR
+      working_dir: $GAMEDIR/drive_c/Program Files (x86)/Microsoft Games/Gears of War/Binaries
+
+    installer:
+    - task:
+        arch: win64
+        name: create_prefix
+        prefix: $GAMEDIR
+    - task:
+        app: win7 arial physx xact_x64
+        arch: win64
+        description: Installing required System DLLs
+        name: winetricks
+        prefix: $GAMEDIR
+    - insert-disc:
+        description: Locate Gears of War DVD
+        requires: autorun.exe
+    - task:
+        description: Installing Gears of War (please close window on completion)
+        executable: $DISC/autorun.exe
+        name: wineexec
+        prefix: $GAMEDIR
+    - input_menu:
+        description: "Disable frame limit of 62 FPS (not recommended)?:"
+        id: LIMIT
+        options:
+        - "set Engine.GameEngine bSmoothFrameRate TRUE": "No"
+        - "set Engine.GameEngine bSmoothFrameRate FALSE": "Yes"
+        preselect: "set Engine.GameEngine bSmoothFrameRate TRUE"
+    - write_file:
+        file: $GAMEDIR/drive_c/Program Files (x86)/Microsoft Games/Gears of War/Binaries/autoexec.cfg
+        content: $INPUT_LIMIT
+    - task:
+        app: d3dx9 d3dx10 d3dx10_43 d3dcompiler_42 d3dcompiler_43 d3dcompiler_46 d3dcompiler_47 dotnet40 dotnet462 dotnet48
+        arch: win64
+        description: Installing required DirectX files (please confirm xalia prompts and minimize Internet browser)
+        name: winetricks
+        prefix: $GAMEDIR
+    - task:
+        description: Installing Gears of War Title Update 1 (please close window on completion)
+        executable: patch1
+        name: wineexec
+        prefix: $GAMEDIR
+    - task:
+        description: Installing Gears of War Title Update 2 (please close window on completion)
+        executable: patch2
+        name: wineexec
+        prefix: $GAMEDIR
+    - task:
+        description: Installing Gears of War Title Update 3 (please close window on completion)
+        executable: patch3
+        name: wineexec
+        prefix: $GAMEDIR
+    - extract:
+        dst: $GAMEDIR/drive_c/Program Files (x86)/Microsoft Games/Gears of War/Binaries/
+        src: xliveless
+    - move:
+        dst: $GAMEDIR/drive_c/Program Files (x86)/Microsoft Games/Gears of War/Binaries/
+        src: troika
+    - move:
+        dst: $GAMEDIR/drive_c/Program Files (x86)/Microsoft Games/Gears of War/Binaries/Startup.exe
+        src: startup
+    - task:
+        description: Update Gears of War environment (please close window on completion)
+        executable: $GAMEDIR/drive_c/Program Files (x86)/Microsoft Games/Gears of War/Binaries/Startup.exe
+        name: wineexec
+        prefix: $GAMEDIR
+    - extract:
+        dst: $GAMEDIR/drive_c/users/$USER/My Documents/
+        src: steamdeck
+    - move:
+        dst: $GAMEDIR/drive_c/users/$USER/AppData/Roaming/Microsoft Games/Gears of War/CurrentSite/default.htm
+        src: launcher
+
+    wine:
+      esync: false
