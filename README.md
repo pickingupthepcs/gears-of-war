@@ -1,21 +1,5 @@
 # Gears of War
 
-## Contents
-
-- [Install Guide - Steam Deck](#install-guide---steam-deck)<br>
-  &emsp;[1. Prepare Gears of War DVD](#1-prepare-gears-of-war-dvd)<br>
-  &emsp;[2. Install Mozilla Firefox](#2-install-mozilla-firefox)<br>
-  &emsp;[3. Install ProtonUp-Qt and GE-Proton10-34](#3-install-protonup-qt-and-ge-proton10-34)<br>
-  &emsp;[4. Install and configure Lutris](#4-install-and-configure-lutris)<br>
-  &emsp;[5. Prepare Gears of War Installer](#5-prepare-gears-of-war-installer)<br>
-  &emsp;[6. Run Gears of War Installer](#6-run-gears-of-war-installer)<br>
-  &emsp;[7. Launch Gears of War](#7-launch-gears-of-war)
-- [Appendix](#appendix)
-    - [Mounting an ISO in SteamOS](#mounting-an-iso-in-steamos)
-    - [Enable/disable frame limit](#enable-disable-frame-limit)
-    - [Skip intro videos](#skip-intro-videos)
-- [Credits](#credits)
-
 ## Install Guide - Steam Deck
 
 This install guide outlines how to install the PC-DVD version of Gears of War on a factory reset Steam Deck in Desktop Mode. Note that there may be steps that aren't applicable if you have already installed Mozilla Firefox, ProtonUp-Qt, Lutris etc.
@@ -101,7 +85,8 @@ Gears of War can be installed using any of the following four methods:<br>
   <img src="https://github.com/lutris/docs/blob/master/assets/7.png">
 </p>
 
-3. This prompt appears whenever a prefix that has .NET installed is updated, and is [safe to ignore](https://github.com/lutris/docs/blob/master/ProvidingLogs%26SystemInfo.md#wine-rundll32.exe-error), therefore select `No`
+3. This prompt appears whenever a prefix that has .NET installed is updated, and is [safe to ignore](https://github.com/lutris/docs/blob/master/ProvidingLogs%26SystemInfo.md#wine-rundll32.exe-error)
+4. Select `No`
 
 ## Appendix
 
