@@ -2,10 +2,10 @@
 
 ## Contents
 
-- [Install Guide > Steam Deck](#install-guide-steam-deck)<br>
+- [Install Guide > Steam Deck](#install-guide->-steam-deck)<br>
   &emsp;[1. Prepare Gears of War DVD](#1-prepare-gears-of-war-dvd)<br>
   &emsp;[2. Install Mozilla Firefox](#2-install-mozilla-firefox)<br>
-  &emsp;[3. Install ProtonUp-Qt and GE-Proton10-34](#3-install-protonupqt-and-geproton1034)<br>
+  &emsp;[3. Install ProtonUp-Qt and GE-Proton10-34](#3-install-protonup-qt-and-ge-proton10-34)<br>
   &emsp;[4. Install and configure Lutris](#4-install-and-configure-lutris)<br>
   &emsp;[5. Prepare Gears of War Installer](#5-prepare-gears-of-war-installer)<br>
   &emsp;[6. Run Gears of War Installer](#6-run-gears-of-war-installer)<br>
@@ -21,11 +21,11 @@
 This install guide outlines how to install the PC-DVD version of Gears of War on a factory reset Steam Deck in Desktop Mode. Note that there may be steps that aren't applicable if you have already installed Mozilla Firefox, ProtonUp-Qt, Lutris etc.
 
 ### Install Requirements
-    Gears of War (PC-DVD)
-    External DVD Drive
-    Internet Browser
-    ProtonUp-Qt
-    Lutris
+- Gears of War (PC-DVD)
+- External DVD Drive
+- Internet Browser
+- ProtonUp-Qt
+- Lutris
 
 ### 1. Prepare Gears of War DVD
 Gears of War can be installed using any of the following four methods:<br>
@@ -48,8 +48,9 @@ Gears of War can be installed using any of the following four methods:<br>
 ### 4. Install and configure Lutris
 1. Open `Discover` and search 'Lutris'
 2. Install and launch `Lutris`
-3. Configure: `Settings` > `Preferences` > `Runners` > `Wine` > `Configure` > `Runner options` > Wine version: `GE-Proton10-34`
-4. Configure: `Settings` > `Preferences` > `Runners` > `Wine` > `Configure` > `System options` > Prefer system libraries: `disabled`
+3. Configure Wine: `Settings` > `Preferences` > `Runners` > `Wine` > `Configure`
+    1. `Runner options` > Wine version: `GE-Proton10-34`
+    2. `System options` > Prefer system libraries: `disabled`
 
 ### 5. Prepare Gears of War Installer
 1. Download [gears-deck-dvd.yaml](https://github.com/pickingupthepcs/gears-of-war/blob/main/gears-deck-dvd.yaml)
@@ -69,19 +70,19 @@ Gears of War can be installed using any of the following four methods:<br>
 3. Installing Gears of War
     1. Select `Install` in the Gears of War setup window
     2. Proceed through the game installation
-    > [!NOTE]
-    > After the game has been installed, close the Gears of War launch window or confirm the DVD prompt.
+> [!NOTE]
+> **🚩 After the game has been installed, close the Gears of War launch window or confirm the DVD prompt.**
 4. Optional Frame Limit
 > [!NOTE]
-> It is recommended that you do NOT disable the frame limit in Gears of War, as highlighted by the [car push sequence](). Note that it can be [toggled manually](https://www.pcgamingwiki.com/wiki/Gears_of_War#High_frame_rate) after installation if you wish to experiment, or the Steam Deck's own frame limiter can be used to cap the frame rate regardless.
+> **🚩 It is recommended that you do NOT disable the frame limit in Gears of War, as highlighted by the [car push sequence]().**<br>
+> **🚩 Note that it can be [toggled manually](https://www.pcgamingwiki.com/wiki/Gears_of_War#High_frame_rate) after installation if you wish to experiment, and that the Steam Deck's own frame limiter can be used to cap the frame rate regardless.**
 5. Installing required DirectX files
 > [!NOTE]
-> .NET installation will generate xalia.exe prompts - confirm them when they appear.<br>
-> .NET installation will automatically open Firefox - minimize Firefox for the remainder of the installation.<br>
-5
+> **🚩 .NET installation will generate xalia.exe prompts - confirm them when they appear.**<br>
+> **🚩 .NET installation will automatically open Firefox - minimize Firefox for the remainder of the installation.**<br>
 6. Installing Gears of War Title Updates 1, 2 and 3
 > [!NOTE]
-> After each update has been installed, close the Gears of War launch window or confirm the DVD prompt.
+> **🚩 After each update has been installed, close the Gears of War launch window or confirm the DVD prompt.**
 7. Completion
     1. Select `Close` in the installer window
     2. Return to the `Games` page in Lutris
@@ -93,16 +94,20 @@ Gears of War can be installed using any of the following four methods:<br>
 ### 7. Launch Gears of War
 1. In Gaming Mode, go to `Library` > `NON-STEAM` > `Gears of War` and select `Play`
 2. On first launch the following prompt will be displayed
-![This application could not be started.](https://github.com/lutris/docs/blob/master/assets/7.png)
-3. This prompt appears whenever a prefix that has .NET installed is updated and is [safe to ignore](https://github.com/lutris/docs/blob/master/ProvidingLogs%26SystemInfo.md#wine-rundll32.exe-error), therefore select `No`
-4. At the main menu, configure the `Video Settings` as the game will need to be restarted for them to take effect
+   
+<p align="center">
+  <img src="https://github.com/lutris/docs/blob/master/assets/7.png">
+</p>
+
+3. This prompt appears whenever a prefix that has .NET installed is updated, and is [safe to ignore](https://github.com/lutris/docs/blob/master/ProvidingLogs%26SystemInfo.md#wine-rundll32.exe-error), therefore select `No`
 
 ## Appendix
 
 ### Mounting an ISO in SteamOS
-1. Open `Dolphin File Manager` > `Settings` > `Configure` > `Configure Dolphin` > `Context Menu` > `Download New Services...`
-2. Locate 'Mount Unmount ISO by tazihad' and select `Install`
-3. Right-click on an ISO file and mount functionality will now be available: `Mount/Unmount iso image` > `Mount`
+1. Open `Dolphin File Manager`
+2. Select `Settings` > `Configure` > `Configure Dolphin` > `Context Menu` > `Download New Services...`
+3. Locate 'Mount Unmount ISO by tazihad' and select `Install`
+4. Right-click on an ISO file and mount functionality will now be available: `Mount/Unmount iso image` > `Mount`
 
 ### [Enable/disable frame limit](https://www.pcgamingwiki.com/wiki/Gears_of_War#High_frame_rate)
 
