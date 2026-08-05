@@ -105,7 +105,7 @@ Gears of War can be installed using any of the following four methods:<br>
 4. Right-click on an ISO file and mount functionality will now be available: `Mount/Unmount iso image` > `Mount`
 
 ## Credits
-Many thanks to the following people for their work that keeps Gears of War playable:
+Many thanks to the following people for their work towards keeping Gears of War playable:
 - Launcher Bypass - [njunius](https://github.com/njunius/Gears-of-War-Launcher-Bypass-Update)
 - AMD Troika Fix - [adjonesey](https://github.com/CookiePLMonster/SilentPatchME/issues/7#issuecomment-2481542968)
 - Gears of War Lutris Scripts - [Lutris](https://lutris.net/games/gears-of-war/) and its contributors
