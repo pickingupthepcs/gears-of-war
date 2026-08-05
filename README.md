@@ -4,7 +4,7 @@
 
 ## Install Guide - Steam Deck
 
-This install guide outlines how to install the PC-DVD version of Gears of War on a factory reset Steam Deck in Desktop Mode. Note that there may be steps that aren't applicable if you have already installed Mozilla Firefox, ProtonUp-Qt, Lutris etc.
+This install guide outlines how to install the PC DVD version of Gears of War on a factory reset Steam Deck in Desktop Mode. Note that there may be steps that aren't applicable if you have already installed Mozilla Firefox, ProtonUp-Qt, Lutris etc.
 
 ### Install Requirements
 - Gears of War (PC DVD)
