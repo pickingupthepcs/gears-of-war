@@ -1,11 +1,13 @@
 # Gears of War
 
+[![Watch the video](https://img.youtube.com/vi/-hc5N7wyh34/maxresdefault.jpg)](https://youtu.be/-hc5N7wyh34)
+
 ## Install Guide - Steam Deck
 
 This install guide outlines how to install the PC-DVD version of Gears of War on a factory reset Steam Deck in Desktop Mode. Note that there may be steps that aren't applicable if you have already installed Mozilla Firefox, ProtonUp-Qt, Lutris etc.
 
 ### Install Requirements
-- Gears of War (PC-DVD)
+- Gears of War (PC DVD)
 - External DVD Drive
 - Internet Browser
 - ProtonUp-Qt
@@ -59,9 +61,9 @@ Gears of War can be installed using any of the following four methods:<br>
 4. Optional Frame Limit
 > [!NOTE]
 > **🚩 It is recommended that you do NOT disable the frame limit in Gears of War.**<br>
-> **🚩 High frame rate issues are highlighted in the [car push sequence]().**<br>
+> **🚩 High frame rate issues are showcased at the end of [this video](https://youtu.be/-hc5N7wyh34).**<br>
 > **🚩 The frame limit can be [toggled manually](https://www.pcgamingwiki.com/wiki/Gears_of_War#High_frame_rate) if you wish to experiment.**<br>
-> **🚩 The Steam Deck's own frame limiter can also be used to cap the frame rate regardless.**
+> **🚩 Note that the Steam Deck's frame limiter can be used to cap the frame rate regardless.**
 5. Installing required DirectX files
 > [!NOTE]
 > **🚩 .NET installation will generate xalia.exe prompts - confirm them when they appear.**<br>
@@ -85,20 +87,22 @@ Gears of War can be installed using any of the following four methods:<br>
   <img src="https://github.com/lutris/docs/blob/master/assets/7.png">
 </p>
 
-3. This prompt appears whenever a prefix that has .NET installed is updated, and is [safe to ignore](https://github.com/lutris/docs/blob/master/ProvidingLogs%26SystemInfo.md#wine-rundll32.exe-error)
+3. This prompt appears whenever a prefix that has .NET installed is updated, and is [safe to ignore](https://github.com/lutris/docs/blob/master/ProvidingLogs%26SystemInfo.md#wine-rundll32exe-error)
 4. Select `No`
 
 ## Appendix
+
+### [SteamGridDB](https://www.steamgriddb.com/game/4572)
+
+### [Skip intro videos](https://www.pcgamingwiki.com/wiki/Gears_of_War#Skip_intro_videos)
+
+### [Enable/disable frame limit](https://www.pcgamingwiki.com/wiki/Gears_of_War#High_frame_rate)
 
 ### Mounting an ISO in SteamOS
 1. Open `Dolphin File Manager`
 2. Select `Settings` > `Configure` > `Configure Dolphin` > `Context Menu` > `Download New Services...`
 3. Locate 'Mount Unmount ISO by tazihad' and select `Install`
 4. Right-click on an ISO file and mount functionality will now be available: `Mount/Unmount iso image` > `Mount`
-
-### [Enable/disable frame limit](https://www.pcgamingwiki.com/wiki/Gears_of_War#High_frame_rate)
-
-### [Skip intro videos](https://www.pcgamingwiki.com/wiki/Gears_of_War#Skip_intro_videos)
 
 ## Credits
 Many thanks to the following people for their work that keeps Gears of War playable:
