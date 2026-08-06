@@ -1,6 +1,6 @@
 # Gears of War
 
-[![Watch the video](https://img.youtube.com/vi/-hc5N7wyh34/maxresdefault.jpg)](https://youtu.be/-hc5N7wyh34)
+[![Gears of War (PC DVD) | Steam Deck](https://img.youtube.com/vi/-hc5N7wyh34/maxresdefault.jpg)](https://youtu.be/-hc5N7wyh34)
 
 ## Install Guide - Steam Deck
 
